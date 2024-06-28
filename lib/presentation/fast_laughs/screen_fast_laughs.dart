@@ -59,7 +59,7 @@ class ScreenFastLaughs extends StatelessWidget {
         children: List.generate(
           100,
           (index) => Stack(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.center,
             children: [
               FastLaughVideo(
                 videoUrl: fastlaughVideos[index % fastlaughVideos.length],
