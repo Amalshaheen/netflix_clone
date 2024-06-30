@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix/application/fast_laugh/fast_laugh_bloc.dart';
@@ -59,20 +61,26 @@ class ScreenFastLaughs extends StatelessWidget {
         children: List.generate(
           100,
           (index) => Stack(
-            alignment: Alignment.center,
+            // alignment: Alignment.center,
+
             children: [
-              FastLaughVideo(
-                videoUrl: fastlaughVideos[index % fastlaughVideos.length],
-                onStateChanged: (isPlaying) {
-                  isPlaying = isPlaying;
-                },
-                screenState: MediaQuery.of(context),
+              Transform.rotate(alignment: Alignment.center,
+                angle: pi/2,
+                child: FastLaughVideo(
+                  videoUrl: fastlaughVideos[index % fastlaughVideos.length],
+                  onStateChanged: (isPlaying) {
+                    isPlaying = isPlaying;
+                  },
+                  screenState: MediaQuery.of(context),
+                ),
               ),
-              FastLaughActions(
-                liked: liked,
-                isPlaying: isPlaying,
-                shadow: shadow,
-                index: index,
+              Alingn(
+                child: FastLaughActions(
+                  liked: liked,
+                  isPlaying: isPlaying,
+                  shadow: shadow,
+                  index: index,
+                ),
               )
             ],
           ),
