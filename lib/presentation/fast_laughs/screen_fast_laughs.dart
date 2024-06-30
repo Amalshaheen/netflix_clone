@@ -62,25 +62,34 @@ class ScreenFastLaughs extends StatelessWidget {
           100,
           (index) => Stack(
             // alignment: Alignment.center,
+            fit: StackFit.expand,
 
             children: [
-              Transform.rotate(alignment: Alignment.center,
-                angle: pi/2,
-                child: FastLaughVideo(
-                  videoUrl: fastlaughVideos[index % fastlaughVideos.length],
-                  onStateChanged: (isPlaying) {
-                    isPlaying = isPlaying;
-                  },
-                  screenState: MediaQuery.of(context),
+              Align(
+                alignment: Alignment.center,
+                child: FittedBox(
+                  child: Transform.rotate(alignment: Alignment.center,
+                    angle: pi/2,
+                    child: FastLaughVideo(
+                      videoUrl: fastlaughVideos[index % fastlaughVideos.length],
+                      onStateChanged: (isPlaying) {
+                        isPlaying = isPlaying;
+                      },
+                      screenState: MediaQuery.of(context),
+                    ),
+                  ),
                 ),
               ),
               
-                 FastLaughActions(
-                  liked: liked,
-                  isPlaying: isPlaying,
-                  shadow: shadow,
-                  index: index,
-                ),
+                 Align(
+                  alignment: Alignment.bottomCenter,
+                   child: FastLaughActions(
+                    liked: liked,
+                    isPlaying: isPlaying,
+                    shadow: shadow,
+                    index: index,
+                                   ),
+                 ),
               
             ],
           ),

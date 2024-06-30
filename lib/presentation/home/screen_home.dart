@@ -59,7 +59,7 @@ class ScreenHome extends StatelessWidget {
                         imageLink:
                             '$imageAppendUrl${state.top10TVShowsInIndiaTodayList[0].posterPath}'),
                     MovieTileList(
-                      title: 'Released in the Past Year',
+                      title: 'Released ha in the Past Year',
                       movieList: state.releasedInThePastYearList.map((e) {
                         return '$imageAppendUrl${e.posterPath}';
                       }).toList(),

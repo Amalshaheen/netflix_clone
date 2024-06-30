@@ -44,4 +44,7 @@ app.*.map.json
 
 #ignore Api Key 
 lib/infrastructure/api_key.dart
+
+#ignore idx related 
 .idx/dev.nix
+.vscode/settings.json

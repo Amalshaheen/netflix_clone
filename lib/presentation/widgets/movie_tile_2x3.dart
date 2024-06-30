@@ -29,6 +29,8 @@ class MovieTile2X3 extends StatelessWidget {
                   )
                 : child,
         errorBuilder: (context, error, stackTrace) => Container(
+          width: 100 * scaleFactor,
+          height: 150 * scaleFactor,
           color: Colors.red[100],
           child: const Center(
             child: Icon(Icons.warning_amber),
