@@ -44,3 +44,4 @@ app.*.map.json
 
 #ignore Api Key 
 lib/infrastructure/api_key.dart
+.idx/dev.nix
