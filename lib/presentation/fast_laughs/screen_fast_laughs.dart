@@ -74,14 +74,14 @@ class ScreenFastLaughs extends StatelessWidget {
                   screenState: MediaQuery.of(context),
                 ),
               ),
-              Alingn(
-                child: FastLaughActions(
+              
+                 FastLaughActions(
                   liked: liked,
                   isPlaying: isPlaying,
                   shadow: shadow,
                   index: index,
                 ),
-              )
+              
             ],
           ),
         ),
