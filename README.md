@@ -37,23 +37,6 @@ REST API Integration: Fetch data dynamically.
 
 ---
 
-📁 Directory Structure
-
-amalshaheen-netflix_clone/
-├── lib/
-│   ├── application/        # State management using BLoC
-│   ├── core/               # Reusable constants (colors, fonts, shadows)
-│   ├── domain/             # Repository interfaces and models
-│   ├── infrastructure/     # Repository implementations
-│   └── presentation/       # UI components and screens
-├── android/                # Android-specific configurations
-├── web/                    # Web app configurations
-├── pubspec.yaml            # Dependencies and metadata
-└── README.md               # Project documentation
-
-
----
-
 📸 Screenshots
 
 1. Home Screen
